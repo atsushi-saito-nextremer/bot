@@ -65,7 +65,7 @@ class AgentDQN(Agent):
 
         self.cur_bellman_err = 0
         self.bot_type = "movie"
-        self.limit_experience_replay_size
+        self.limit_experience_replay_size = True
         
 
         # Prediction Mode: load trained DQN model
