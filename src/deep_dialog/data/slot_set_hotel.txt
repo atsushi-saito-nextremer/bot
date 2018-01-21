@@ -1,0 +1,17 @@
+closing
+greeting
+implicit_value
+numberofpeople
+numberofkids
+taskcomplete
+other
+price
+state
+zip
+result
+ticket
+mc_list
+roomtype
+name
+date
+reservation

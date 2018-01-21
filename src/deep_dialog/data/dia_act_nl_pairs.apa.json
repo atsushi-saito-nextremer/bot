@@ -1,0 +1,327 @@
+{
+  "dia_acts": {
+    "inform": [
+      {
+        "request_slots": [],
+        "nl": {
+          "agt": "Sure, Your reservation is $reservation$, is that correct?",
+          "usr": "$reservation$."
+        },
+        "inform_slots": [
+          "reservation"
+        ]
+      },
+      {
+        "request_slots": [
+          "ticket"
+        ],
+        "nl": {
+          "agt": "Sure, Your reservation is $reservation$, is that correct?",
+          "usr": "$reservation$."
+        },
+        "inform_slots": [
+          "reservation"
+        ]
+      },
+      {
+        "request_slots": [],
+        "nl": {
+          "agt": "I found the room that filled your condition. Do you want to book it?",
+          "usr": ""
+        },
+        "inform_slots": [
+          "ticket"
+        ]
+      },
+      {
+        "request_slots": [],
+        "nl": {
+          "agt": "Sure, Your date is $date$, is that correct?",
+          "usr": "$date$ days."
+        },
+        "inform_slots": [
+          "date"
+        ]
+      },
+      {
+        "request_slots": [
+          "ticket"
+        ],
+        "nl": {
+          "agt": "Sure, Your date is $date$, is that correct?",
+          "usr": "$date$ days."
+        },
+        "inform_slots": [
+          "date"
+        ]
+      },
+      {
+        "request_slots": [],
+        "nl": {
+          "agt": "Sure, Your roomtype is $roomtype$, is that correct?",
+          "usr": "$roomtype$."
+        },
+        "inform_slots": [
+          "roomtype"
+        ]
+      },
+      {
+        "request_slots": [
+          "ticket"
+        ],
+        "nl": {
+          "agt": "Sure, Your roomtype is $roomtype$, is that correct?",
+          "usr": "$roomtype$."
+        },
+        "inform_slots": [
+          "roomtype"
+        ]
+      },
+      {
+        "request_slots": [],
+        "nl": {
+          "agt": "Sure, Your name is $name$, is that correct?",
+          "usr": "My name is $name$."
+        },
+        "inform_slots": [
+          "name"
+        ]
+      },
+      {
+        "request_slots": [
+          "ticket"
+        ],
+        "nl": {
+          "agt": "Sure, Your name is $name$, is that correct?",
+          "usr": "My name is $name$."
+        },
+        "inform_slots": [
+          "name"
+        ]
+      },
+      {
+        "request_slots": [],
+        "nl": {
+          "agt": "Please swipe your card or insert it into the machine.",
+          "usr": ""
+        },
+        "inform_slots": [
+          "taskcomplete"
+        ]
+      },
+      {
+        "request_slots": [],
+        "nl": {
+          "agt": "Let me confirm, your name is $name$, we prepare a $roomtype$ room for you, and you will stay $date$ days, right?",
+          "usr": ""
+        },
+        "inform_slots": [
+          "taskcomplete",
+          "date",
+          "reservation",
+          "name",
+          "roomtype"
+        ]
+      },
+      {
+        "request_slots": [],
+        "nl": {
+          "agt": "Let me confirm, your name is $name$, and you will stay $date$ days, right?",
+          "usr": ""
+        },
+        "inform_slots": [
+          "taskcomplete",
+          "date",
+          "reservation",
+          "name"
+        ]
+      },
+      {
+        "request_slots": [],
+        "nl": {
+          "agt": "Let me confirm, your name is $name$, right?",
+          "usr": ""
+        },
+        "inform_slots": [
+          "taskcomplete",
+          "ticket",
+          "reservation",
+          "name"
+        ]
+      },
+      {
+        "request_slots": [],
+        "nl": {
+          "agt": "I confirm your reservation.",
+          "usr": ""
+        },
+        "inform_slots": [
+          "ticket"
+        ]
+      },
+      {
+        "request_slots": [],
+        "nl": {
+          "agt": "Let me confirm, your name is $name$, right?",
+          "usr": ""
+        },
+        "inform_slots": [
+          "taskcomplete",
+          "reservation",
+          "name"
+        ]
+      }
+    ],
+    "deny": [
+      {
+        "request_slots": [],
+        "nl": {
+          "agt": "",
+          "usr": "No, I want to stay at $roomtype$ room."
+        },
+        "inform_slots": [
+          "roomtype"
+        ]
+      },
+      {
+        "request_slots": [],
+        "nl": {
+          "agt": "",
+          "usr": "No."
+        },
+        "inform_slots": []
+      }
+    ],
+    "confirm_answer": [
+      {
+        "request_slots": [],
+        "nl": {
+          "agt": "",
+          "usr": "Yeah."
+        },
+        "inform_slots": []
+      }
+    ],
+    "request": [
+      {
+        "request_slots": [
+          "ticket"
+        ],
+        "nl": {
+          "agt": "",
+          "usr": "Check in please."
+        },
+        "inform_slots": []
+      },
+      {
+        "request_slots": [
+          "ticket"
+        ],
+        "nl": {
+          "agt": "$reservation$",
+          "usr": "$reservation$"
+        },
+        "inform_slots": [
+          "reservation"
+        ]
+      },
+      {
+        "request_slots": [
+          "reservation"
+        ],
+        "nl": {
+          "agt": "Do you have a reservation? Yes or no?",
+          "usr": ""
+        },
+        "inform_slots": []
+      },
+      {
+        "request_slots": [
+          "date"
+        ],
+        "nl": {
+          "agt": "Sure, Let us check. How many nights will you be staying for?",
+          "usr": ""
+        },
+        "inform_slots": []
+      },
+      {
+        "request_slots": [
+          "roomtype"
+        ],
+        "nl": {
+          "agt": "Sure, you will stay $date$ days. You can choose the non-smoking or smoking room, which do you prefer?",
+          "usr": ""
+        },
+        "inform_slots": [
+          "date"
+        ]
+      },
+      {
+        "request_slots": [
+          "roomtype"
+        ],
+        "nl": {
+          "agt": "You can choose the non-smoking or smoking room, which do you prefer?",
+          "usr": ""
+        },
+        "inform_slots": [
+        ]
+      },
+      {
+        "request_slots": [
+          "name"
+        ],
+        "nl": {
+          "agt": "We prepare a $roomtype$ room for you. May I have your name, please?",
+          "usr": ""
+        },
+        "inform_slots": [
+          "roomtype"
+        ]
+      },
+      {
+        "request_slots": [
+          "name"
+        ],
+        "nl": {
+          "agt": "Sure, May I have your name, please?",
+          "usr": ""
+        },
+        "inform_slots": []
+      }
+    ],
+    "confirm_question": [
+      {
+        "request_slots": [],
+        "nl": {
+          "agt": "Excuse us, our hotel is required for the guests to pay in advance. Your total cost is $price$ yen. Would that be OK?",
+          "usr": ""
+        },
+        "inform_slots": [
+          "price"
+        ]
+      }
+    ],
+    "thanks": [
+      {
+        "request_slots": [],
+        "nl": {
+          "agt": "Please swipe your card or insert it into the machine.",
+          "usr": "Yeah."
+        },
+        "inform_slots": []
+      },
+      {
+        "request_slots": [
+          "ticket"
+        ],
+        "nl": {
+          "agt": "Please swipe your card or insert it into the machine.",
+          "usr": "Yeah."
+        },
+        "inform_slots": []
+      }
+    ]
+  }
+}

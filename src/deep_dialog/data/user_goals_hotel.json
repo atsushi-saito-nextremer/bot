@@ -1,0 +1,104 @@
+[
+  {
+    "diaact": "request",
+    "inform_slots": {
+      "name": "yamada",
+      "date": "1",
+      "roomtype": "smoking",
+      "reservation": "No"
+    },
+    "request_slots": {
+    }
+  },
+  {
+    "diaact": "request",
+    "inform_slots": {
+      "name": "yamada",
+      "reservation": "Yes"
+    },
+    "request_slots": {
+    }
+  },
+  {
+    "diaact": "request",
+    "inform_slots": {
+      "name": "yamada",
+      "reservation": "Yes"
+    },
+    "request_slots": {
+    }
+  },
+  {
+    "diaact": "request",
+    "inform_slots": {
+      "name": "yamada",
+      "date": "1",
+      "roomtype": "smoking",
+      "reservation": "No"
+    },
+    "request_slots": {
+    }
+  },
+  {
+    "diaact": "request",
+    "inform_slots": {
+      "name": "yamada",
+      "date": "2",
+      "roomtype": "non smoking",
+      "reservation": "No"
+    },
+    "request_slots": {
+    }
+  },
+    {
+    "diaact": "request",
+    "inform_slots": {
+      "name": "tanaka",
+      "date": "1",
+      "roomtype": "smoking",
+      "reservation": "No"
+    },
+    "request_slots": {
+    }
+  },
+  {
+    "diaact": "request",
+    "inform_slots": {
+      "name": "tanaka",
+      "reservation": "Yes"
+    },
+    "request_slots": {
+    }
+  },
+  {
+    "diaact": "request",
+    "inform_slots": {
+      "name": "tanaka",
+      "reservation": "Yes"
+    },
+    "request_slots": {
+    }
+  },
+  {
+    "diaact": "request",
+    "inform_slots": {
+      "name": "tanaka",
+      "date": "1",
+      "roomtype": "smoking",
+      "reservation": "No"
+    },
+    "request_slots": {
+    }
+  },
+  {
+    "diaact": "request",
+    "inform_slots": {
+      "name": "tanaka",
+      "date": "2",
+      "roomtype": "non smoking",
+      "reservation": "No"
+    },
+    "request_slots": {
+    }
+  }
+]
