@@ -65,7 +65,7 @@ class AgentDQN(Agent):
 
         self.cur_bellman_err = 0
         self.bot_type = "movie"
-        self.limit_experience_replay_size = True
+        self.limit_experience_replay_pool_size = True
         
 
         # Prediction Mode: load trained DQN model
@@ -267,13 +267,13 @@ class AgentDQN(Agent):
                 # ##assert False
         # 予測モードならERに登録
         else:  # Prediction Mode
-            if self.limit_experience_replay_size and len(self.experience_replay_pool) > self.experience_replay_size:
-                self.experience_replay.reverse()
-                self.experience_replay.pop()
-                self.experience_replay.reverse()
+            if self.limit_experience_replay_pool_size and len(self.experience_replay_pool) > self.experience_replay_pool_size:
+                self.experience_replay_pool.reverse()
+                self.experience_replay_pool.pop()
+                self.experience_replay_pool.reverse()
                 self.experience_replay_pool.append(training_example)
             else:
-                self.experience_replay_pool.append(training_exapmle)
+                self.experience_replay_pool.append(training_example)
 
     def train(self, batch_size=1, num_batches=100):
         """ Train DQN with experience replay """
