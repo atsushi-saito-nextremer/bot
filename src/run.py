@@ -33,9 +33,9 @@ import cPickle as pickle
 from deep_dialog.dialog_system import DialogManager, text_to_dict
 from deep_dialog.agents import AgentCmd, InformAgent, RequestAllAgent, RandomAgent, EchoAgent, RequestBasicsAgent, AgentDQN
 from deep_dialog.usersims.usersim_rule  import RuleSimulator
-from deep_dialog.usersims.real_user  import RealUser
-from deep_dialog.usersims.real_select_user  import RealSelectUser
-from deep_dialog.usersims.usersim_rule2  import RuleSimulator2
+#from deep_dialog.usersims.real_user  import RealUser
+#from deep_dialog.usersims.real_select_user  import RealSelectUser
+#from deep_dialog.usersims.usersim_rule2  import RuleSimulator2
 
 from deep_dialog import dialog_config
 from deep_dialog.dialog_config import *
