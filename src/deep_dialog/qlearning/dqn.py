@@ -93,11 +93,12 @@ class QNet(object):
         # Set False to trainable of the target network                
         input_size = self.shape_dict["input_size"]
         output_size = self.shape_dict["output_size"]
-        self._ph_xs = tf.placeholder(dtype=tf.float32, shape=[None, input_size], name="input_q_xs")
+        self._ph_xs_q = tf.placeholder(dtype=tf.float32, shape=[None, input_size], name="input_q_xs")
+        self._ph_xs_t = tf.placeholder(dtype=tf.float32, shape=[None, input_size], name="input_t_xs")
         self._ph_target_qs = tf.placeholder(dtype=tf.float32, shape=[None, output_size], name="target_qs")
 
-        q_h1 = tf.matmul(self._ph_xs, self._qvars["h1"]) + self._qvars["b1"]
-        t_h1 = tf.matmul(self._ph_xs, self._tvars["h1"]) + self._tvars["b1"]
+        q_h1 = tf.matmul(self._ph_xs_q, self._qvars["h1"]) + self._qvars["b1"]
+        t_h1 = tf.matmul(self._ph_xs_t, self._tvars["h1"]) + self._tvars["b1"]
 
         q_h1 = tf.nn.relu(q_h1)
         t_h1 = tf.nn.relu(t_h1)
@@ -149,7 +150,11 @@ class QNet(object):
     
     @property
     def ph_inputs_q_net(self):
-        return self._ph_xs
+        return self._ph_xs_q
+
+    @property
+    def ph_inputs_t_net(self):
+        return self._ph_xs_t
 
     @property
     def copy_q_net_to_target_ops(self):
@@ -210,7 +215,7 @@ class AgentQNet(QNet):
         return self._sess.run(self.q_out_op, feed_dict=feed_dict)
 
     def t_calc_forward(self, batched_inputs):
-        feed_dict = {self.ph_inputs_q_net:batched_inputs}
+        feed_dict = {self.ph_inputs_t_net:batched_inputs}
         return self._sess.run(self.t_out_op, feed_dict=feed_dict)
 
     def _set_loss_op(self):
