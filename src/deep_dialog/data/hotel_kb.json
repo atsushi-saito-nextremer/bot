@@ -1,0 +1,58 @@
+{
+  "0": {
+    "reservation": "Yes",
+    "name": "tanaka"
+  },
+  "1": {
+    "name": "yamada",
+    "reservation": "Yes"
+  },
+  "2": {
+    "name": "yamada",
+    "roomtype": "smoking",
+    "date": "2",
+    "reservation": "No"
+  },
+  "3": {
+    "name": "yamada",
+    "roomtype": "non smoking",
+    "date": "2",
+    "reservation": "No"
+  },
+  "4": {
+    "name": "yamada",
+    "roomtype": "smoking",
+    "date": "1",
+    "reservation": "No"
+  },
+  "5": {
+    "name": "yamada",
+    "roomtype": "non smoking",
+    "date": "1",
+    "reservation": "No"
+  },
+  "6": {
+    "name": "tanaka",
+    "roomtype": "smoking",
+    "date": "2",
+    "reservation": "No"
+  },
+  "7": {
+    "name": "tanaka",
+    "roomtype": "non smoking",
+    "date": "2",
+    "reservation": "No"
+  },
+  "8": {
+    "name": "tanaka",
+    "roomtype": "smoking",
+    "date": "1",
+    "reservation": "No"
+  },
+  "9": {
+    "name": "tanaka",
+    "roomtype": "non smoking",
+    "date": "1",
+    "reservation": "No"
+  }
+}
