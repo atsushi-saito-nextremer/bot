@@ -15,7 +15,7 @@ class OptimizerWithHyperParams(object):
         self._learning_rate = 0.001
         self._decay_rate = 0.999
         self._momentum = 0.1
-        self._grad_clip =  1e-3
+        self._grad_clip =  None
         self._smooth_eps = 1e-8
         self._sdg_type = 'rmsprop'
         self._reg_cost = 1e-3
@@ -232,12 +232,15 @@ class AgentQNet(QNet):
             loss_op = self.loss_op
 
         grads_and_vars =self._opt.optimizer.compute_gradients(loss_op)
-        capped_gvs = [(tf.clip_by_value(grad, -self._opt.grad_clip, self._opt.grad_clip), var) for grad, var in grads_and_vars]
-        self._updateq_q_op = self._opt.optimizer.apply_gradients(capped_gvs)
+        if self._opt.grad_clip is None:
+            self._update_q_op = self._opt.optimizer.apply_gradients(grads_and_vars)
+        else:
+            capped_gvs = [(tf.clip_by_value(grad, -self._opt.grad_clip, self._opt.grad_clip), var) for grad, var in grads_and_vars]
+            self._update_q_op = self._opt.optimizer.apply_gradients(capped_gvs)
 
     @property
     def update_q_net_op(self):
-        return self._updateq_q_op
+        return self._update_q_op
 
     @property
     def reg_loss_op(self):
